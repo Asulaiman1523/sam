@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+:root{
+    --green: #27ae60;
+    --black: #444;
+    --light-color: #777;
+    --bg-color:#cacaca;
+}
+*{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    font-weight: normal;
+    transition: all .5s ease-out;
+}
+section{
+    padding: 2rem 9%;
+    min-height: 100vh;
+}
+#menu-btn{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    height: 70px;
+    width: 70px;
+    line-height: 70px;
+    border-radius: 50%;
+    font-size: 40px;
+    cursor: pointer;
+    color:  #00b4d8;
+    z-index: 1000;
+    text-align: center;
+}
+
+#menu-btn.fa-times{
+    transform: rotate(180deg);
+}
+
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,.90);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    padding-bottom: 50px;
+    clip-path: circle(0% at 95.3% 8.5%);
+}
+
+.navbar.active{
+    clip-path: circle(140% at 95.3% 8.5%);
+}
+
+.navbar a{
+    font-size: 30px;
+    padding-bottom: 30px;
+    color:  #00b4d8;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+.navbar a:hover{
+    color: #eee;
+}
+
+.home{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.home #particles-js{
+position: absolute;
+left: 0;
+right: 0;
+height: 100%;
+width: 100%;
+}
+.home::before{
+position: absolute;
+left: 0;
+right: 0;
+height: 100%;
+width: 100%;
+}
+.home .content img{
+height:15rem;
+width: 15rem;
+border-radius: 50%;
+object-fit: cover;
+border: 12px solid #00b4d8;
+}
+.home .content h3{
+    color: #444;
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.home .content h3 span{
+    color: #00b4d8;
+    font-weight: 500;
+}
+.home .content p{
+    color: #444;
+    font-size: 1.5rem;
+    line-height: 2;
+}
+
+@media (max-width:991px){
+    #particles-js{
+        width: 100%;
+    }
+    .navbar a{
+        font-size: 25px;
+    }
+}
+@media (max-width:480px){
+  .navbar a{
+        font-size: 20px;
+    }
+    #particles-js{
+        width: 100%;
+    }
+}
